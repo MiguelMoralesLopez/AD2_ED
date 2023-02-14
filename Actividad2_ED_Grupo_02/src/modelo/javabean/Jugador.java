@@ -26,7 +26,7 @@ public class Jugador {
     
     // CONSTRUCTORES
     /**
-     * Constructor con parámetros
+     * Constructor con todos los parámetros
      * @param dorsal Representa el número de dorsal del jugador
      * @param numeroTarjetasAmarillas Representa el número de tarjetas amarillas que ha recibido el jugador
      * @param numeroTarjetasRojas Representa el número de tarjetas rojas que ha recibido el jugador
@@ -44,8 +44,19 @@ public class Jugador {
 	public Jugador() {
 		super();
 	}
+	
+	/**
+	 * Constructor con parámetros de número de tarjetas
+	 * @param numeroTarjetasAmarillas
+	 * @param numeroTarjetasRojas
+	 */
+	public Jugador(int numeroTarjetasAmarillas, int numeroTarjetasRojas) {
+		super();
+		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+		this.numeroTarjetasRojas = numeroTarjetasRojas;
+	}
 
-
+	
 	// GETTER Y SETTER
     public int getDorsal() {
 		return dorsal;
@@ -85,7 +96,7 @@ public class Jugador {
 	/**
 	 * Este método asignará un dorsal pasado por parametro a la propiedad dorsal del objeto, pero únicamente cuando el dorsal
 	 * sea mayor o igual que 1 o menor o igual que 30. En caso contrario, se le asignará el valor "-1".
-	 * @param dorsal: número de dorsal del jugador
+	 * @param dorsal : número de dorsal del jugador
 	 */
 	public void ponerDorsal(int dorsal) {
     	if(dorsal >= 1 && dorsal <= 30) {
@@ -98,8 +109,11 @@ public class Jugador {
 	// MÉTODO ESTAEXPULSADO
 	/**
 	 * Este método indica si un jugador está expulsado o no. Para ello, primero comprueba el número de tarjetas amarillas,
-	 * si estas son igual a 2, el jugador está expulsado.
-	 * Por otro lado, comprueba el número de tarjetas rojas, si esta es igual a 1, el jugador está expulsado.
+	 * si el número igual a 2, el jugador está expulsado.
+	 * Por otro lado, comprueba el número de tarjetas rojas, si el número es igual a 1, el jugador está expulsado.
+	 * No sería posible poner un número mayor a 2 en las tarjetas amarillas, ni mayor que 1 en las tarjetas rojas ya que
+	 * lo impide el reglamento del juego.
+	 * 
 	 * @return expulsado, en el caso de que cumpla alguna de las dos condiciones anteriores
 	 */
     public boolean estaExpulsado() {
