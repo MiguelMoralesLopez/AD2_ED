@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package testJUnit5;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,29 +20,34 @@ class TestJugador {
 	// TEST METODO PONERDORSAL
 	// A continuación, testeamos la clase ponerDorsal con todas las posibilidades que nos pueden aparecer :
 	
+	
 	/** PRUEBA 1
+	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
+	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
+	 * El resultado esperado para este test es : número de dorsal = -1 ,ya que el dorsal 0 se sale del límite, es menor a 1.
+	 */
+	@Test
+	void testPonerDorsal0() {
+		Jugador jugador1 = new Jugador(0, 0, 0);
+		jugador1.ponerDorsal(0);
+		assertTrue(jugador1.getDorsal() == -1 );
+		System.out.println(jugador1.getDorsal());
+	} 
+	
+	
+	/** PRUEBA 2
 	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
 	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
 	 * El resultado esperado para este test es : número de dorsal = 1
 	 */
 	@Test
 	void testPonerDorsal1() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
+		Jugador jugador1 = new Jugador(0,0,0);
 		jugador1.ponerDorsal(1);
 		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);	
+		System.out.println(jugador1.getDorsal());
 	}
 	
-	/** PRUEBA 2
-	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
-	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
-	 * El resultado esperado para este test es : número de dorsal = 30
-	 */
-	@Test
-	void testPonerDorsal30() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
-		jugador1.ponerDorsal(30);
-		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);	
-	}
 	
 	/** PRUEBA 3
 	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
@@ -55,10 +58,24 @@ class TestJugador {
 	void testPonerDorsal15() {
 		Jugador jugador1 = new Jugador(0, 0, 0);
 		jugador1.ponerDorsal(15);
-		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);	
+		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);
+		System.out.println(jugador1.getDorsal());
 	}
 	
 	/** PRUEBA 4
+	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
+	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
+	 * El resultado esperado para este test es : número de dorsal = 30
+	 */
+	@Test
+	void testPonerDorsal30() {
+		Jugador jugador1 = new Jugador(0, 0, 0);
+		jugador1.ponerDorsal(30);
+		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);
+		System.out.println(jugador1.getDorsal());
+	}
+	
+	/** PRUEBA 5
 	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
 	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
 	 * El resultado esperado para este test es : número de dorsal = -1 ,ya que el dorsal 40 se sale del límite, es mayor a 30.
@@ -67,19 +84,8 @@ class TestJugador {
 	void testPonerDorsal40() {
 		Jugador jugador1 = new Jugador(0, 0, 0);
 		jugador1.ponerDorsal(40);
-		assertTrue(jugador1.getDorsal() == -1 );	
-	}
-	
-	/** PRUEBA 5
-	 * En este test probamos el método ponerDorsal, por lo tanto, el resultado que obtengamos para que nos de bien el test
-	 * debe de tener un número de dorsal mayor o igual que 1, y menor o igual que 30.
-	 * El resultado esperado para este test es : número de dorsal = -1 ,ya que el dorsal 0 se sale del límite, es menor a 1.
-	 */
-	@Test
-	void testPonerDorsal0() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
-		jugador1.ponerDorsal(0);
-		assertTrue(jugador1.getDorsal() == -1 );	
+		assertTrue(jugador1.getDorsal() == -1 );
+		System.out.println(jugador1.getDorsal());
 	}
 	
 	
