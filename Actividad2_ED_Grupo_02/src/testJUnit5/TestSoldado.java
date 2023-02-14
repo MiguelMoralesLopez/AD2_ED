@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test;
+package testJUnit5;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
  * @author Sheila
  *
  */
-class TestJugador {
+class TestSoldado {
 
 	/**
 	 * @throws java.lang.Exception
