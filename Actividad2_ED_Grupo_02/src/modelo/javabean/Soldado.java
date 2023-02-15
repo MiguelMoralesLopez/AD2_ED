@@ -56,12 +56,7 @@ public class Soldado {
 	public void setNumeroBalas(int numeroBalas) {
 		this.numeroBalas = numeroBalas;
 	}
-
-	//REDEFINICION DE OBJETOS
-	  @Override
-		public String toString() {
-			return "Soldado [estaMuerto=" + estaMuerto + ", numeroBalas=" + numeroBalas + "]";
-		}
+	
 	
 	// ***MÉTODOS PROPIOS DE LA CLASE SOLDADO***
 	// METODO PUEDEDISPARAR
@@ -80,7 +75,7 @@ public class Soldado {
 	/**
 	 * Este método lo que indica es que al disparar, el número de balas va bajando. 
 	 * Tambien indica que: True, el soldado al que está disparando está muerto.
-	 * @param sol Indica el soldado al que se le dispara
+	 * @param sol Objeto tipo soldado
 	 */
 	public void disparar(Soldado sol) {
     	this.numeroBalas--;

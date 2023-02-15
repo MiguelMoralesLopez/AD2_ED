@@ -38,12 +38,6 @@ public class Jugador {
 		this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
     
-    /**
-     * Constructor sin parámetros
-     */
-	public Jugador() {
-		super();
-	}
 	
 	/**
 	 * Constructor con parámetros de número de tarjetas
@@ -55,6 +49,7 @@ public class Jugador {
 		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
 		this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
+	
 
 	
 	// GETTER Y SETTER
@@ -72,7 +67,7 @@ public class Jugador {
 
 	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas) {
 		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
-	}
+	} 
 
 	public int getNumeroTarjetasRojas() {
 		return numeroTarjetasRojas;
@@ -82,15 +77,7 @@ public class Jugador {
 		this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
 
-	
-	// REDEFINICION DE OBJETOS
-	@Override
-	public String toString() {
-		return "Jugador [dorsal=" + dorsal + ", numeroTarjetasAmarillas=" + numeroTarjetasAmarillas
-				+ ", numeroTarjetasRojas=" + numeroTarjetasRojas + "]";
-	}
 
-	
 	// *** MÉTODOS PROPIOS DE LA CALSE JUGADOR ***
 	// MÉTODO PONERDORSAL
 	/**
@@ -109,10 +96,9 @@ public class Jugador {
 	// MÉTODO ESTAEXPULSADO
 	/**
 	 * Este método indica si un jugador está expulsado o no. Para ello, primero comprueba el número de tarjetas amarillas,
-	 * si el número igual a 2, el jugador está expulsado.
-	 * Por otro lado, comprueba el número de tarjetas rojas, si el número es igual a 1, el jugador está expulsado.
-	 * No sería posible poner un número mayor a 2 en las tarjetas amarillas, ni mayor que 1 en las tarjetas rojas ya que
-	 * lo impide el reglamento del juego.
+	 * si el número igual a 2, el jugador está expulsado = true.
+	 * Por otro lado, comprueba el número de tarjetas rojas, si el número es igual a 1, el jugador está expulsado = true.
+	 * En el caso de que ninguna de las anteriores opciones se cumpliera, está expulsado = false
 	 * 
 	 * @return expulsado, en el caso de que cumpla alguna de las dos condiciones anteriores
 	 */

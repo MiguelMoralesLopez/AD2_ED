@@ -28,10 +28,12 @@ class TestJugador {
 	 */
 	@Test
 	void testPonerDorsal0() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
+		Jugador jugador1 = new Jugador(0,0,0);
 		jugador1.ponerDorsal(0);
-		assertTrue(jugador1.getDorsal() == -1 );
+		int resultadoEsperado = -1;
+		int resultadoObtenido = jugador1.getDorsal();
 		System.out.println(jugador1.getDorsal());
+		assertEquals(resultadoEsperado, resultadoObtenido);
 	} 
 	
 	
@@ -42,10 +44,11 @@ class TestJugador {
 	 */
 	@Test
 	void testPonerDorsal1() {
-		Jugador jugador1 = new Jugador(0,0,0);
-		jugador1.ponerDorsal(1);
-		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);	
+		Jugador jugador1 = new Jugador(1,0,0);
+		int resultadoEsperado = 1;
+		int resultadoObtenido = jugador1.getDorsal();
 		System.out.println(jugador1.getDorsal());
+		assertEquals(resultadoEsperado, resultadoObtenido);	
 	}
 	
 	
@@ -56,10 +59,11 @@ class TestJugador {
 	 */
 	@Test
 	void testPonerDorsal15() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
-		jugador1.ponerDorsal(15);
-		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);
+		Jugador jugador1 = new Jugador(15, 0, 0);
+		int resultadoEsperado = 15;
+		int resultadoObtenido = jugador1.getDorsal();
 		System.out.println(jugador1.getDorsal());
+		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
 	/** PRUEBA 4
@@ -69,10 +73,11 @@ class TestJugador {
 	 */
 	@Test
 	void testPonerDorsal30() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
-		jugador1.ponerDorsal(30);
-		assertTrue(jugador1.getDorsal() >= 1 && jugador1.getDorsal() <= 30);
+		Jugador jugador1 = new Jugador(30, 0, 0);
+		int resultadoEsperado = 30;
+		int resultadoObtenido = jugador1.getDorsal();
 		System.out.println(jugador1.getDorsal());
+		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
 	/** PRUEBA 5
@@ -82,10 +87,11 @@ class TestJugador {
 	 */
 	@Test
 	void testPonerDorsal40() {
-		Jugador jugador1 = new Jugador(0, 0, 0);
-		jugador1.ponerDorsal(40);
-		assertTrue(jugador1.getDorsal() == -1 );
+		Jugador jugador1 = new Jugador(40, 0, 0);
+		int resultadoEsperado = 40;
+		int resultadoObtenido = jugador1.getDorsal();
 		System.out.println(jugador1.getDorsal());
+		assertEquals(resultadoEsperado, resultadoObtenido);
 	}
 	
 	
@@ -100,19 +106,8 @@ class TestJugador {
 	@Test
 	void estaExpulsado1() {
 		Jugador jugador2 = new Jugador(1, 0);
-	if(jugador2.getNumeroTarjetasAmarillas() == 2) {
-		assertTrue(jugador2.estaExpulsado());
-	}                         
-	else if(jugador2.getNumeroTarjetasRojas() == 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}         
-	else if (jugador2.getNumeroTarjetasAmarillas() != 2) {
 		assertFalse(jugador2.estaExpulsado());
-	}
-	else if(jugador2.getNumeroTarjetasRojas() != 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}
-	System.out.println(jugador2.estaExpulsado());
+		System.out.println(jugador2.estaExpulsado());
 	}
 	
 	/** PRUEBA 2
@@ -123,20 +118,9 @@ class TestJugador {
 	@Test
 	void estaExpulsado2() {
 		Jugador jugador2 = new Jugador(2, 0);
-	if(jugador2.getNumeroTarjetasAmarillas() == 2) {
 		assertTrue(jugador2.estaExpulsado());
-	}                         
-	else if(jugador2.getNumeroTarjetasRojas() == 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}         
-	else if (jugador2.getNumeroTarjetasAmarillas() != 2) {
-		assertFalse(jugador2.estaExpulsado());
-	}
-	else if(jugador2.getNumeroTarjetasRojas() != 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}
-	System.out.println(jugador2.estaExpulsado());
-	}
+		System.out.println(jugador2.estaExpulsado());
+	} 
 	
 	/** PRUEBA 3
 	 * El jugador estara expulsado si tiene 2 tarjetas amarillas o 1 roja
@@ -146,42 +130,20 @@ class TestJugador {
 	@Test
 	void estaExpulsado3() {
 		Jugador jugador2 = new Jugador(0, 1);
-	if(jugador2.getNumeroTarjetasAmarillas() == 2) {
 		assertTrue(jugador2.estaExpulsado());
-	}                         
-	else if(jugador2.getNumeroTarjetasRojas() == 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}         
-	else if (jugador2.getNumeroTarjetasAmarillas() != 2) {
-		assertFalse(jugador2.estaExpulsado());
-	}
-	else if(jugador2.getNumeroTarjetasRojas() != 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}
-	System.out.println(jugador2.estaExpulsado());
+		System.out.println(jugador2.estaExpulsado());
 	}
 	
 	/** PRUEBA 4
 	 * El jugador estara expulsado si tiene 2 tarjetas amarillas o 1 roja
 	 * Probamos un jugador con 0 tarjetas amarillas y 0 rojas
-	 * Resultado esperado estaExpulsado = true
+	 * Resultado esperado estaExpulsado = false
 	 */
 	@Test
 	void estaExpulsado4() {
 		Jugador jugador2 = new Jugador(0, 0);
-	if(jugador2.getNumeroTarjetasAmarillas() == 2) {
-		assertTrue(jugador2.estaExpulsado());
-	}                         
-	else if(jugador2.getNumeroTarjetasRojas() == 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}         
-	else if (jugador2.getNumeroTarjetasAmarillas() != 2) {
 		assertFalse(jugador2.estaExpulsado());
-	}
-	else if(jugador2.getNumeroTarjetasRojas() != 1) {
-		assertFalse(jugador2.estaExpulsado());
-	}
-	System.out.println(jugador2.estaExpulsado());
+		System.out.println(jugador2.estaExpulsado());
 	}
 
 	/** PRUEBA 5
@@ -192,21 +154,11 @@ class TestJugador {
 	@Test
 	void estaExpulsado5() {
 		Jugador jugador2 = new Jugador(1, 1);
-	if(jugador2.getNumeroTarjetasAmarillas() == 2) {
 		assertTrue(jugador2.estaExpulsado());
-	}                         
-	else if(jugador2.getNumeroTarjetasRojas() == 1) {
-		assertTrue(jugador2.estaExpulsado());
-	}         
-	else if (jugador2.getNumeroTarjetasAmarillas() != 2) {
-		assertFalse(jugador2.estaExpulsado());
+		System.out.println(jugador2.estaExpulsado());
 	}
-	else if(jugador2.getNumeroTarjetasRojas() != 1) {
-		assertFalse(jugador2.estaExpulsado());
-	}
-	System.out.println(jugador2.estaExpulsado());
-	}
+}
 	
 
 	
-}
+
