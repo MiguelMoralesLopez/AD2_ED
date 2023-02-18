@@ -36,14 +36,10 @@ class TestSoldado {
 	@Test
 	void testPuedeDisparar() {
 		sol1.setNumeroBalas(10);
-		boolean resultadoEsperado = true;
-		boolean resultadoObtenido = sol1.puedeDisparar();
-		assertEquals(resultadoEsperado, resultadoObtenido);
+		assertTrue(sol1.puedeDisparar());
 		
 		sol1.setNumeroBalas(0);
-		resultadoEsperado = false;
-		resultadoObtenido = sol1.puedeDisparar();
-		assertEquals(resultadoEsperado, resultadoObtenido);
+		assertFalse(sol1.puedeDisparar());
 	}
 	/**
 	 * Test del método disparar() de Soldado.
@@ -63,10 +59,7 @@ class TestSoldado {
 		int balasEsperadas = 9;
 		int balasObtenidas = sol1.getNumeroBalas();
 		assertEquals(balasEsperadas, balasObtenidas);
-		
-		boolean muerteEsperada = true;
-		boolean muerteObtenida = sol2.isEstaMuerto();
-		assertEquals(muerteEsperada, muerteObtenida);
+		assertTrue(sol2.isEstaMuerto());
 		
 		
 	}

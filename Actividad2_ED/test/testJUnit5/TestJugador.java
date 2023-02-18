@@ -81,52 +81,48 @@ class TestJugador {
 		j1.setDorsal(0);
 		j1.setNumeroTarjetasAmarillas(0);
 		j1.setNumeroTarjetasRojas(0);
-		boolean testExpulsado = j1.estaExpulsado();
-		boolean expulsado = false;
-		assertEquals(testExpulsado, expulsado);
+		assertFalse(j1.estaExpulsado());
 		
 		int tarjetasAmarillasEsperadas = 0;
 		int tarjetasAmarillasObtenidas = j1.getNumeroTarjetasAmarillas();
 		assertEquals(tarjetasAmarillasEsperadas, tarjetasAmarillasObtenidas);
+		
 		int tarjetasRojasEsperadas = 0;
 		int tarjetasRojasObtenidas = j1.getNumeroTarjetasRojas();
 		assertEquals(tarjetasRojasEsperadas, tarjetasRojasObtenidas);
 		
 		j1.setNumeroTarjetasAmarillas(1);
 		j1.setNumeroTarjetasRojas(0);
-		testExpulsado = j1.estaExpulsado();
-		expulsado = false;
-		assertEquals(testExpulsado, expulsado);
+		assertFalse(j1.estaExpulsado());
 		
 		tarjetasAmarillasEsperadas = 1;
 		tarjetasAmarillasObtenidas = j1.getNumeroTarjetasAmarillas();
 		assertEquals(tarjetasAmarillasEsperadas, tarjetasAmarillasObtenidas);
+		
 		tarjetasRojasEsperadas = 0;
 		tarjetasRojasObtenidas = j1.getNumeroTarjetasRojas();
 		assertEquals(tarjetasRojasEsperadas, tarjetasRojasObtenidas);
 		
 		j1.setNumeroTarjetasAmarillas(2);
 		j1.setNumeroTarjetasRojas(0);
-		testExpulsado = j1.estaExpulsado();
-		expulsado = true;
-		assertEquals(testExpulsado, expulsado);
+		assertTrue(j1.estaExpulsado());
 		
 		tarjetasAmarillasEsperadas = 2;
 		tarjetasAmarillasObtenidas = j1.getNumeroTarjetasAmarillas();
 		assertEquals(tarjetasAmarillasEsperadas, tarjetasAmarillasObtenidas);
+		
 		tarjetasRojasEsperadas = 0;
 		tarjetasRojasObtenidas = j1.getNumeroTarjetasRojas();
 		assertEquals(tarjetasRojasEsperadas, tarjetasRojasObtenidas);
 		
 		j1.setNumeroTarjetasAmarillas(0);
 		j1.setNumeroTarjetasRojas(1);
-		testExpulsado = j1.estaExpulsado();
-		expulsado = true;
-		assertEquals(testExpulsado, expulsado);
+		assertTrue(j1.estaExpulsado());
 		
 		tarjetasAmarillasEsperadas = 0;
 		tarjetasAmarillasObtenidas = j1.getNumeroTarjetasAmarillas();
 		assertEquals(tarjetasAmarillasEsperadas, tarjetasAmarillasObtenidas);
+		
 		tarjetasRojasEsperadas = 1;
 		tarjetasRojasObtenidas = j1.getNumeroTarjetasRojas();
 		assertEquals(tarjetasRojasEsperadas, tarjetasRojasObtenidas);
