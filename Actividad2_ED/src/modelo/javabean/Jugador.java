@@ -1,5 +1,7 @@
 package modelo.javabean;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class Jugador {
 	/**
 	 * atributo privado que hace referencia al numero de dorsal de nuestro jugador
@@ -82,3 +84,5 @@ public class Jugador {
     	return expulsado;
     }            
 }
+
+
