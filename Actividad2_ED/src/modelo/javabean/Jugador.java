@@ -2,7 +2,14 @@ package modelo.javabean;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Esta clase se encarga de colocar dorsales a nuestros jugadores y indicar el numero de tarjetas amarillas
+ * y rojas que tiene.
+ * @author space
+ *
+ */
 public class Jugador {
+	
 	/**
 	 * atributo privado que hace referencia al numero de dorsal de nuestro jugador
 	 */
@@ -47,10 +54,12 @@ public class Jugador {
 	/**
 	 * Este método se encarga de poner el dorsal a nuestro jugador
 	 * 
-	 * @param dorsal hace referencia al dorsal de nuestro jugador. 
 	 * El número de dorsal de nuestro jugador será establecido 
 	 * siempre y cuando sea un número mayor o igual que 1, o menor o igual que 30.
 	 * En cualquier otro caso el numero de dorsal será -1
+	 * 
+	 * @param dorsal hace referencia al dorsal de nuestro jugador. 
+	 * 
 	 */
 	
 	public void ponerDorsal(int dorsal) {

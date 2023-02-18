@@ -1,5 +1,11 @@
 package modelo.javabean;
 
+/**
+ * Esta clase se encarga de indicaros si nuestro jugador está muerto y almacenar balas. Tiene métodos para indicarnos
+ * si nuestro Soldado puede disparar 
+ * @author space
+ *
+ */
 public class Soldado {
 	/**
 	 * atributo privado booleano que nos indica si nuestro soldado está vivo o muerto
@@ -12,7 +18,7 @@ public class Soldado {
     
 
     
-    public boolean isEstaMuerto() {
+    public boolean getEstaMuerto() {
 		return estaMuerto;
 	}
 
@@ -30,6 +36,7 @@ public class Soldado {
 
 	/**
 	 * Este método nos indica si nuestro soldado puede disparar o no
+	 * 
 	 * @return devuelve un atributo booleano, true si puede disparar y 
 	 * false si no puede disparar 
 	 * si el número de balas es mayor que 0, devuelve true

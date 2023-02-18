@@ -54,7 +54,7 @@ class TestSoldado {
 		sol1.disparar(sol2);
 
 		boolean resultadoEsperado = true;
-		boolean resultadoObtenido = sol2.isEstaMuerto();
+		boolean resultadoObtenido = sol2.getEstaMuerto();
 		assertEquals (resultadoEsperado, resultadoObtenido);
 
 		int balasRestantesEsperadas = 1;
