@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import modelo.javabean.Soldado;
 
+
 class TestSoldado {
 
 	private Soldado sol1;
@@ -63,3 +64,5 @@ class TestSoldado {
 		}
 
 }
+
+

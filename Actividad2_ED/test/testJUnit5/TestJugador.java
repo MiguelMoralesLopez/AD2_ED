@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import modelo.javabean.Jugador;
 
+
 class TestJugador {
 	
 	private Jugador jug1;
